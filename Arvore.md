@@ -1,0 +1,1 @@
+Uma árvore binária é uma estrutura de dados onde cada nó pode ter no máximo dois filhos. As árvores são amplamente utilizadas na computação para modelar problemas e organizar informações.

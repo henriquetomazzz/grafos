@@ -1,0 +1,1 @@
+//Escreva uma função que exclui todos os nós de uma árvore binária de busca com Valor par.
