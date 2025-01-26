@@ -12,15 +12,24 @@ class Node {
       return null;
     }
   
-    raiz.left = excluirNosPares(raiz.left);
-    raiz.right = excluirNosPares(raiz.right);
-  
     if (raiz.value % 2 === 0) {
-      if (raiz.left === null) return raiz.right;
-      if (raiz.right === null) return raiz.left;
+      if (raiz.left === null && raiz.right === null) {
+        return null;
+      }
+  
+      if (raiz.left === null) {
+        return raiz.right;
+      }
+  
+      if (raiz.right === null) {
+        return raiz.left;
+      }
   
       let substituto = encontrarMinimo(raiz.right);
       raiz.value = substituto.value;
+      raiz.right = excluirNosPares(raiz.right);
+    } else {
+      raiz.left = excluirNosPares(raiz.left);
       raiz.right = excluirNosPares(raiz.right);
     }
   
